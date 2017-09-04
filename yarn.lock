@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@slack/client@3.11.0":
-  version "3.11.0"
-  resolved "https://registry.yarnpkg.com/@slack/client/-/client-3.11.0.tgz#06abf6128081cca5e09c8d38d029abbcc25d4417"
+"@slack/client@3.12.0":
+  version "3.12.0"
+  resolved "https://registry.yarnpkg.com/@slack/client/-/client-3.12.0.tgz#cf0325a68b3deb3ca06642b398896fc482501fcb"
   dependencies:
     async "^1.5.0"
     bluebird "^3.3.3"
