@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import {WebClient} from '@slack/client';
 import getUserBySlackUserId from './helpers/getUserBySlackUserId';
 import handleLeaveOfAbsense from './controllers/attendanceManagement/handleLeaveOfAbsense';
+import handleConnectionStatus from './controllers/server/handleConnectionStatus';
 
 const port = 3050;
 const app = express();
@@ -20,6 +21,8 @@ app.post('/action', (req, res, next) => {
   switch (intentName) {
     case '請假':
       return handleLeaveOfAbsense(req, res, next, result);
+    case '確認連線狀態':
+      return handleConnectionStatus(req, res, next, result);
     default:
       res.status(200).end();
   }
