@@ -18,6 +18,8 @@ app.post('/action', (req, res, next) => {
   const {result} = req.body;
   const {intentName} = result.metadata;
 
+  console.log('intentName', intentName);
+
   switch (intentName) {
     case '請假':
       return handleLeaveOfAbsense(req, res, next, result);
